@@ -1,2 +1,3 @@
-
-gsap.to('.box' , {duration: 2, x: 200, y: 50, backgroundColor: "#333", border: "2px solid blue", borderRadius: "20%"})
+// ease: back , elastic , bounce ,...
+// gsap.to('.box' , {duration: 2, x: "80vw", backgroundColor: "#333", border: "2px solid blue", rotate: 180, borderRadius: "20%"})
+gsap.to('.box' , {duration: 3, x: ()=> window.innerWidth - 200, backgroundColor: "#333", repeat: 4, yoyo: true, border: "2px solid blue", rotate: 180, borderRadius: "20%" , ease: "bounce"})
