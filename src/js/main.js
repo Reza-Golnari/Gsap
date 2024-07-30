@@ -50,3 +50,58 @@
 // })`,
 // y: 250
 // });
+
+// gsap.fromTo(".box",{
+//     x: -50,
+//     y: -20,
+//     backgroundColor: '#2ecc71',
+//     borderRadius: "30%",
+// },{
+//     x: 700,
+//     y: 0,
+//     duration: 5,
+//     backgroundColor: "#e74c3c",
+//     rotation: 360,
+//     border: "5px solid #f1c40f",
+//     ease: "elastic.out",
+//     repeat: 3,
+//     yoyo: true,
+// })
+
+// gsap.to(".box" , {
+//     x: 300 ,
+//     y: 400,
+//     ease: "steps(20)",
+//     duration: 5,
+//     repeat: 3,
+//     yoyo: true,
+//     borderRadius: "50%",
+//     backgroundColor: "#3498db"
+// })
+
+// gsap.fromTo(".box" , {
+//     x: 500,
+//     backgroundColor: "red",
+//     border: "5px solid yellow",
+//     borderRadius: "20%",
+//     ease: "none",
+// },{
+//     x: 300,
+//     y: 200,
+//     duration: 2,
+// })
+
+const object = {a: 20 , b : 'Reza'}
+
+gsap.to(object , {
+    a: 300,
+    b: "Ali",
+    onUpdate(){
+        console.log(object.a)
+    },
+    onComplete(){
+        console.log('c')
+    },
+    duration: 20,
+    ease: "power4.in"
+})
