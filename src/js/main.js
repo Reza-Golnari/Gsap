@@ -111,10 +111,11 @@ const targets = document.getElementsByClassName('box')
 gsap.to(targets , {
     y: 150,
     duration: .5,
-    repeat: -1,
-    yoyo: true,
     stagger: {
-        from: "center",
+        repeat: -1,
+        yoyo: true,
+        from: "edges",
         amount: .5,
+
     },
 })
