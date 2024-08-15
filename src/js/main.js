@@ -91,17 +91,30 @@
 //     duration: 2,
 // })
 
-const object = {a: 20 , b : 'Reza'}
+// const object = {a: 20 , b : 'Reza'}
+//
+// gsap.to(object , {
+//     a: 300,
+//     b: "Ali",
+//     onUpdate(){
+//         console.log(object.a)
+//     },
+//     onComplete(){
+//         console.log('c')
+//     },
+//     duration: 20,
+//     ease: "power4.in"
+// })
 
-gsap.to(object , {
-    a: 300,
-    b: "Ali",
-    onUpdate(){
-        console.log(object.a)
+const targets = document.getElementsByClassName('box')
+
+gsap.to(targets , {
+    y: 150,
+    duration: .5,
+    repeat: -1,
+    yoyo: true,
+    stagger: {
+        from: "center",
+        amount: .5,
     },
-    onComplete(){
-        console.log('c')
-    },
-    duration: 20,
-    ease: "power4.in"
 })

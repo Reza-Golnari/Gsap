@@ -6,10 +6,17 @@
 
 body{
     padding: 20px;
+    background-color: #3d3d3d;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 .box{
     width: 100px;
     height: 100px;
-    background-color: green;
+    background-color: var(--clr);
 }
