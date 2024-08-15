@@ -106,7 +106,8 @@
 //     ease: "power4.in"
 // })
 
-const targets = document.getElementsByClassName('box')
+const targets = document.getElementsByClassName('box');
+const targets2 = document.getElementsByClassName('box-2');
 
 gsap.to(targets , {
     y: 150,
@@ -117,5 +118,16 @@ gsap.to(targets , {
         from: "edges",
         amount: .5,
 
+    },
+})
+
+gsap.to(targets2 , {
+    y: 150,
+    duration: .5,
+    stagger: {
+        repeat: -1,
+        yoyo: true,
+        from: "edges",
+        amount: .5,
     },
 })
