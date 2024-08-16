@@ -134,8 +134,19 @@
 // })
 
 let observer = new IntersectionObserver((entries , self)=> {
-    entries.forEach(entry => {
-        if(entry.isIntersecting) console.log(entry.target)
+    let targets = entries.map(entry => {
+        if(entry.isIntersecting){
+                self.unobserve(entry.target);
+                return entry.target;
+        }
+    })
+
+    gsap.fromTo(targets , {
+        opacity: 0,
+    },{
+        opacity: 1,
+        duration: 0.5,
+        stagger: .1,
     })
 }, {
     root: document.querySelector(".container"),
