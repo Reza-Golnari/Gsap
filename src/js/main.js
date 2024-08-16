@@ -133,15 +133,13 @@
 //     }
 // })
 
-gsap.to('.box' , {
-    duration: 1,
-    scale: 0.1,
-    repeat: -1,
-    yoyo: true,
-    stagger:{
-        // grid: "auto",
-        grid: [7,10],
-        amount: 1.5,
-        from: "center",
-    }
+let observer = new IntersectionObserver((entries , self)=> {
+    entries.forEach(entry => {
+        if(entry.isIntersecting) console.log(entry.target)
+    })
+}, {
+    root: document.querySelector(".container"),
 })
+
+const boxes = document.getElementsByClassName("box")
+Array.from(boxes).forEach(box => observer.observe(box))
