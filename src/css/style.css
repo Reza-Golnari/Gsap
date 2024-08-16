@@ -11,31 +11,17 @@ body{
 }
 
 .container{
-    width: 80vw;
     height: 100%;
     margin-inline: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-
-.top{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(20 , 1fr);
+    grid-template-rows: repeat(10 , 1fr);
     gap: 10px;
-}
-
-.bottom{
-    display: flex;
-    align-items: center;
     justify-content: center;
-    gap: 10px;
 }
 
 .box{
-    width: 100px;
-    height: 100px;
-    background-color: var(--clr);
+    width: 100%;
+    height: 100%;
+    background-color: #00b894;
 }
