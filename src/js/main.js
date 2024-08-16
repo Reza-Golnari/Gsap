@@ -106,28 +106,29 @@
 //     ease: "power4.in"
 // })
 
-const targets = document.getElementsByClassName('box');
-const targets2 = document.getElementsByClassName('box-2');
+const topBoxes = Array.from(document.querySelectorAll(".top .box"));
+const bottomBoxes = Array.from(document.querySelectorAll(".bottom .box"));
 
-gsap.to(targets , {
-    y: 150,
-    duration: .5,
-    stagger: {
-        repeat: -1,
-        yoyo: true,
-        from: "edges",
-        amount: .5,
-
-    },
+gsap.to(topBoxes , {
+    y: 200,
+    rotation: 360,
+    duration: 0.5,
+    repeat: -1,
+    yoyo: true,
+    stagger:{
+        amount: 0.5,
+        from: "random",
+    }
 })
 
-gsap.to(targets2 , {
-    y: 150,
-    duration: .5,
-    stagger: {
-        repeat: -1,
-        yoyo: true,
-        from: "edges",
-        amount: .5,
-    },
+gsap.to(bottomBoxes , {
+    y: -200,
+    rotation: 360,
+    duration: 0.5,
+    repeat: -1,
+    yoyo: true,
+    stagger:{
+        amount: 0.5,
+        from: "random",
+    }
 })
