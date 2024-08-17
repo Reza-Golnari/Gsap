@@ -155,15 +155,15 @@
 // const boxes = document.getElementsByClassName("box")
 // Array.from(boxes).forEach(box => observer.observe(box))
 
-const tl = gsap.timeline();
+const tl = gsap.timeline({repeat: -1, yoyo: true, repeatDelay: 0.5});
 
-tl.to(".box-1" , {rotation: 180}, 1)
-tl.to(".box-2" , {rotation: 180}, 3)
-tl.to(".box-3" , {rotation: 180}, 1)
-tl.to(".box-4" , {rotation: 180}, "<")
-tl.to(".box-5" , {rotation: 180})
-tl.to(".box-6" , {rotation: 180})
-tl.to(".box-7" , {rotation: 180})
-tl.to(".box-8" , {rotation: 180})
-tl.to(".box-9" , {rotation: 180})
-tl.to(".box-10" , {rotation: 180}, "+=1")
+tl.fromTo(".box-1" , {scale: 0.1} , {rotation: 360, scale: 1, duration: 0.1})
+tl.fromTo(".box-2" , {scale: 0.1} , {rotation: 360, scale: 1, duration: 0.1})
+tl.fromTo(".box-3" , {scale: 0.1} , {rotation: 360, scale: 1, duration: 0.1})
+tl.fromTo(".box-4" , {scale: 0.1} , {rotation: 360, scale: 1, duration: 0.1})
+tl.fromTo(".box-5" , {scale: 0.1} , {rotation: 360, scale: 1, duration: 0.1})
+tl.fromTo(".box-6" , {scale: 0.1} , {rotation: 360, scale: 1, duration: 0.1})
+tl.fromTo(".box-7" , {scale: 0.1} , {rotation: 360, scale: 1, duration: 0.1})
+tl.fromTo(".box-8" , {scale: 0.1} , {rotation: 360, scale: 1, duration: 0.1})
+tl.fromTo(".box-9" , {scale: 0.1} , {rotation: 360, scale: 1, duration: 0.1})
+tl.fromTo(".box-10" , {scale: 0.1} , {rotation: 360, scale: 1, duration: 0.1})
