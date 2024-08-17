@@ -157,13 +157,13 @@
 
 const tl = gsap.timeline();
 
-tl.to(".box-1" , {rotation: 180})
-tl.to(".box-2" , {rotation: 180 , delay: 2})
-tl.to(".box-3" , {rotation: 180})
-tl.to(".box-4" , {rotation: 180})
+tl.to(".box-1" , {rotation: 180}, 1)
+tl.to(".box-2" , {rotation: 180}, 3)
+tl.to(".box-3" , {rotation: 180}, 1)
+tl.to(".box-4" , {rotation: 180}, "<")
 tl.to(".box-5" , {rotation: 180})
 tl.to(".box-6" , {rotation: 180})
-tl.to(".box-7" , {rotation: 180 , delay: 3})
+tl.to(".box-7" , {rotation: 180})
 tl.to(".box-8" , {rotation: 180})
 tl.to(".box-9" , {rotation: 180})
-tl.to(".box-10" , {rotation: 180})
+tl.to(".box-10" , {rotation: 180}, "+=1")
