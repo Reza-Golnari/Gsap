@@ -133,24 +133,37 @@
 //     }
 // })
 
-let observer = new IntersectionObserver((entries , self)=> {
-    let targets = entries.map(entry => {
-        if(entry.isIntersecting){
-                self.unobserve(entry.target);
-                return entry.target;
-        }
-    })
+// let observer = new IntersectionObserver((entries , self)=> {
+//     let targets = entries.map(entry => {
+//         if(entry.isIntersecting){
+//                 self.unobserve(entry.target);
+//                 return entry.target;
+//         }
+//     })
+//
+//     gsap.fromTo(targets , {
+//         opacity: 0,
+//     },{
+//         opacity: 1,
+//         duration: 0.5,
+//         stagger: .1,
+//     })
+// }, {
+//     root: document.querySelector(".container"),
+// })
+//
+// const boxes = document.getElementsByClassName("box")
+// Array.from(boxes).forEach(box => observer.observe(box))
 
-    gsap.fromTo(targets , {
-        opacity: 0,
-    },{
-        opacity: 1,
-        duration: 0.5,
-        stagger: .1,
-    })
-}, {
-    root: document.querySelector(".container"),
-})
+const tl = gsap.timeline();
 
-const boxes = document.getElementsByClassName("box")
-Array.from(boxes).forEach(box => observer.observe(box))
+tl.to(".box-1" , {rotation: 180})
+tl.to(".box-2" , {rotation: 180 , delay: 2})
+tl.to(".box-3" , {rotation: 180})
+tl.to(".box-4" , {rotation: 180})
+tl.to(".box-5" , {rotation: 180})
+tl.to(".box-6" , {rotation: 180})
+tl.to(".box-7" , {rotation: 180 , delay: 3})
+tl.to(".box-8" , {rotation: 180})
+tl.to(".box-9" , {rotation: 180})
+tl.to(".box-10" , {rotation: 180})

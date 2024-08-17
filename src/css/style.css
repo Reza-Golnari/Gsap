@@ -11,17 +11,13 @@ body{
 }
 
 .container{
-    width: 700px;
+    width: 1000px;
     height: 100%;
-    overflow-y: auto;
     margin-inline: auto;
-    display: grid;
-    grid-template-columns: repeat(3 , 1fr);
-    gap: 20px;
-}
-
-.container::-webkit-scrollbar{
-    display: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 
 .box{
@@ -29,7 +25,8 @@ body{
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 80px;
+    width: 90px;
+    height: 90px;
     background-color: #00b894;
     border-radius: 10px;
 }
