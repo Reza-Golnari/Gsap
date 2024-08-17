@@ -155,15 +155,32 @@
 // const boxes = document.getElementsByClassName("box")
 // Array.from(boxes).forEach(box => observer.observe(box))
 
-const tl = gsap.timeline({repeat: -1, yoyo: true, repeatDelay: 0.5});
+// const tl = gsap.timeline({repeat: -1, yoyo: true, repeatDelay: 0.5 , defaults:{
+//     duration: 0.2,
+//         scale: 1,
+//     }});
+//
+// tl.fromTo(".box-1" , {scale: 0.1, backgroundColor: '#2ecc71'} , {rotation: 360, backgroundColor: '#e74c3c', borderRadius: '30%', y: 100, x: 20})
+// tl.fromTo(".box-2" , {scale: 0.1, backgroundColor: '#2ecc71'} , {rotation: 360, backgroundColor: '#e74c3c', borderRadius: '30%', y: 100, x: 20})
+// tl.fromTo(".box-3" , {scale: 0.1, backgroundColor: '#2ecc71'} , {rotation: 360, backgroundColor: '#e74c3c', borderRadius: '30%', y: 100, x: 20})
+// tl.fromTo(".box-4" , {scale: 0.1, backgroundColor: '#2ecc71'} , {rotation: 360, backgroundColor: '#e74c3c', borderRadius: '30%', y: 100, x: 20})
+// tl.fromTo(".box-5" , {scale: 0.1, backgroundColor: '#2ecc71'} , {rotation: 360, backgroundColor: '#e74c3c', borderRadius: '30%', y: 100, x: 20})
+// tl.fromTo(".box-6" , {scale: 0.1, backgroundColor: '#2ecc71'} , {rotation: 360, backgroundColor: '#e74c3c', borderRadius: '30%', y: 100, x: 20})
+// tl.fromTo(".box-7" , {scale: 0.1, backgroundColor: '#2ecc71'} , {rotation: 360, backgroundColor: '#e74c3c', borderRadius: '30%', y: 100, x: 20})
+// tl.fromTo(".box-8" , {scale: 0.1, backgroundColor: '#2ecc71'} , {rotation: 360, backgroundColor: '#e74c3c', borderRadius: '30%', y: 100, x: 20})
+// tl.fromTo(".box-9" , {scale: 0.1, backgroundColor: '#2ecc71'} , {rotation: 360, backgroundColor: '#e74c3c', borderRadius: '30%', y: 100, x: 20})
+// tl.fromTo(".box-10" , {scale: 0.1, backgroundColor: '#2ecc71'} , {rotation: 360, backgroundColor: '#e74c3c', borderRadius: '30%', y: 100, x: 20})
 
-tl.fromTo(".box-1" , {scale: 0.1} , {rotation: 360, scale: 1, duration: 0.1})
-tl.fromTo(".box-2" , {scale: 0.1} , {rotation: 360, scale: 1, duration: 0.1})
-tl.fromTo(".box-3" , {scale: 0.1} , {rotation: 360, scale: 1, duration: 0.1})
-tl.fromTo(".box-4" , {scale: 0.1} , {rotation: 360, scale: 1, duration: 0.1})
-tl.fromTo(".box-5" , {scale: 0.1} , {rotation: 360, scale: 1, duration: 0.1})
-tl.fromTo(".box-6" , {scale: 0.1} , {rotation: 360, scale: 1, duration: 0.1})
-tl.fromTo(".box-7" , {scale: 0.1} , {rotation: 360, scale: 1, duration: 0.1})
-tl.fromTo(".box-8" , {scale: 0.1} , {rotation: 360, scale: 1, duration: 0.1})
-tl.fromTo(".box-9" , {scale: 0.1} , {rotation: 360, scale: 1, duration: 0.1})
-tl.fromTo(".box-10" , {scale: 0.1} , {rotation: 360, scale: 1, duration: 0.1})
+let anim = gsap.fromTo('.box' , {y:-100} , {
+    y: 100,
+    duration: 5,
+})
+
+// anim.timeScale(0.1)
+
+// setTimeout(()=> anim.progress(1) , 1000)
+// setTimeout(()=> anim.pause() , 1000)
+// setTimeout(()=> anim.kill() , 1000)
+// setTimeout(()=> anim.reverse() , 1500)
+// setTimeout(()=> anim.resume() , 2000)
+// setTimeout(()=> anim.timeScale(2).reverse() , 2000)
