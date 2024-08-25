@@ -1,18 +1,19 @@
 document.addEventListener("DOMContentLoaded", (event) => {
     gsap.registerPlugin(ScrollTrigger)
 
-    gsap.to('.c' , {
+    gsap.to('.b' , {
         // scrollTrigger: '.c',
         scrollTrigger:{
-          trigger: ".c",
+          trigger: ".a",
           // toggleActions: "play none none none",  // default // triggerActions: "onEnter onLeave onEnterBack onLeaveBack"
           // toggleActions: "play reverse play reverse",
             toggleActions: "restart pause resume pause",
         //     start and end => start : "top bottom" [trigger position] [scroller position]
         //     start: "top center",
-            start: "-20px 50%",
+            start: "top 20px",
             // end: "bottom center",
-            end: "+=300",
+            end: "bottom 80%",
+            endTrigger: '.c',
             markers: true, // markers
         },
         x: 500,
