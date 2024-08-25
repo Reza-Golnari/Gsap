@@ -11,6 +11,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
         //     start and end => start : "top bottom" [trigger position] [scroller position]
         //     start: "top center",
             start: "-20px 50%",
+            // end: "bottom center",
+            end: "+=300",
             markers: true, // markers
         },
         x: 500,
