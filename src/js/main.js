@@ -1,15 +1,14 @@
 document.addEventListener("DOMContentLoaded", (event) => {
     gsap.registerPlugin(ScrollTrigger)
 
-    gsap.to('.c' , {
-        // scrollTrigger: '.c',
+    let tl = gsap.timeline({
         scrollTrigger:{
-          trigger: ".c",
-          // toggleActions: "play none none none",  // default // triggerActions: "onEnter onLeave onEnterBack onLeaveBack"
-          // toggleActions: "play reverse play reverse",
+            trigger: ".c",
+            // toggleActions: "play none none none",  // default // triggerActions: "onEnter onLeave onEnterBack onLeaveBack"
+            // toggleActions: "play reverse play reverse",
             toggleActions: "restart pause resume pause",
-        //     start and end => start : "top bottom" [trigger position] [scroller position]
-        //     start: "top center",
+            //     start and end => start : "top bottom" [trigger position] [scroller position]
+            //     start: "top center",
             start: "center 80%",
             // end: "bottom center",
             end: "center 10%",
@@ -17,9 +16,21 @@ document.addEventListener("DOMContentLoaded", (event) => {
             scrub: 2,
             markers: true, // markers
         },
+    })
+
+    tl.to('.c' , {
+        // scrollTrigger: '.c',
         x: 500,
         rotate: 360,
         duration: 4,
     })
+        .to('.c' , {
+            backgroundColor: "purple",
+            duration: 1,
+        })
+        .to('.c' , {
+            x: 0,
+            duration: 3,
+        })
 })
 
