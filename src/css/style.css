@@ -6,7 +6,6 @@
 
 body{
     padding: 10px;
-    height: 100vh;
     background-color: #3d3d3d;
 }
 
@@ -15,9 +14,9 @@ body{
     height: 100%;
     margin-inline: auto;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+    flex-direction: column;
+    gap: 400px;
+    padding-top: 20px;
 }
 
 .box{

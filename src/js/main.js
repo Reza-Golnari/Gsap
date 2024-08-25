@@ -171,10 +171,10 @@
 // tl.fromTo(".box-9" , {scale: 0.1, backgroundColor: '#2ecc71'} , {rotation: 360, backgroundColor: '#e74c3c', borderRadius: '30%', y: 100, x: 20})
 // tl.fromTo(".box-10" , {scale: 0.1, backgroundColor: '#2ecc71'} , {rotation: 360, backgroundColor: '#e74c3c', borderRadius: '30%', y: 100, x: 20})
 
-let anim = gsap.fromTo('.box' , {y:-100} , {
-    y: 100,
-    duration: 5,
-})
+// let anim = gsap.fromTo('.box' , {y:-100} , {
+//     y: 100,
+//     duration: 5,
+// })
 
 // anim.timeScale(0.1)
 
@@ -184,3 +184,5 @@ let anim = gsap.fromTo('.box' , {y:-100} , {
 // setTimeout(()=> anim.reverse() , 1500)
 // setTimeout(()=> anim.resume() , 2000)
 // setTimeout(()=> anim.timeScale(2).reverse() , 2000)
+
+
