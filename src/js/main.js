@@ -19,6 +19,7 @@ window.addEventListener('DOMContentLoaded' , ()=>{
             end: ()=> '+=' + 1000 * (xSections.length - 1) + 'vh',
             toggleActions: "play pause reverse pause",
             pin: true,
+            pinSpacing: false,
             scrub: true,
         },
         x: 200,
@@ -60,7 +61,7 @@ window.addEventListener('DOMContentLoaded' , ()=>{
             pin: true,
             scrub: 1,
             snap: 1 / (xSections.length - 1),
-            end: () => "+=" + document.querySelector('#xContainer').offsetWidth
+            end: () => "+=" + document.querySelector('#xContainer').offsetWidth,
         }
     })
 
