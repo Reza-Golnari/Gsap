@@ -6,22 +6,23 @@ window.addEventListener('DOMContentLoaded' , ()=>{
     })
 
     gsap.registerPlugin(ScrollTrigger)
+    const xSections = gsap.utils.toArray('#xContainer section')
 
     gsap.set('.box-1' , {left: 50 , top: 30, rotate: 25, position: 'absolute'})
     gsap.set('.box-2' , {right: 20 , top: 70, position: 'absolute'})
-    gsap.set('.box-3' , {left: 250 , top: 500, scale: .5, position: 'absolute'})
+    gsap.set('.box-3' , {left: 250 , top: 500, scale: .5, zIndex: 9, position: 'absolute'})
 
     gsap.to('.box-3' , {
         scrollTrigger:{
             trigger: '.box-3',
             start: 'center center',
-            end: '+=500px',
+            end: ()=> '+=' + 1000 * (xSections.length - 1) + 'vh',
             toggleActions: "play pause reverse pause",
             pin: true,
             scrub: true,
         },
         x: 200,
-        rotate: 360,
+        rotate: 720,
         scale: 1,
         borderRadius: '10px'
     })
@@ -31,7 +32,6 @@ window.addEventListener('DOMContentLoaded' , ()=>{
             trigger: document.querySelector('header'),
             start: '10% top',
             end: 'center top',
-            markers: true,
         },
         right: 200,
         top: '70vh',
@@ -44,7 +44,6 @@ window.addEventListener('DOMContentLoaded' , ()=>{
             trigger: document.querySelector('header'),
             start: '10% top',
             end: 'center top',
-            markers: true,
             scrub: 1,
         },
         left: 200,
@@ -52,5 +51,18 @@ window.addEventListener('DOMContentLoaded' , ()=>{
         right: 'unset',
         rotate: 888,
     })
+
+    gsap.to(xSections , {
+        xPercent: -100 * (xSections.length - 1),
+        ease: "none",
+        scrollTrigger:{
+            trigger: '#xContainer',
+            pin: true,
+            scrub: 1,
+            snap: 1 / (xSections.length - 1),
+            end: () => "+=" + document.querySelector('#xContainer').offsetWidth
+        }
+    })
+
 })
 
